@@ -118,10 +118,8 @@ function NewFactForm({ setFacts, setShowForm }) {
   const textLength = text.length;
 
   async function handleSubmit(e) {
-
     e.preventDefault();
     console.log(text, source, category);
-
 
     if (text && isValidHttpUrl(source) && category && textLength <= 200) {
       // const newFact = {
@@ -134,7 +132,6 @@ function NewFactForm({ setFacts, setShowForm }) {
       //   votesFalse: 0,
       //   createdIn: new Date().getFullYear(),
       // };
-
 
       setIsUploading(true);
       const { data: newFact, error } = await supabase
